@@ -52,7 +52,7 @@ public class GamePlay extends AppCompatActivity {
                         if (g > random) {
                             et1.setText("");
                             n--;
-                            tv2.setText("Less then " + g + ". Try again... \n" + n + " chances left");
+                            tv2.setText("Less than " + g + ". Try again... \n" + n + " chances left");
                             if (n == 0) {
                                 Intent loser = new Intent(GamePlay.this, loser.class);
                                 loser.putExtra("level", l);
@@ -62,7 +62,7 @@ public class GamePlay extends AppCompatActivity {
                         } else if (g < random) {
                             et1.setText("");
                             n--;
-                            tv2.setText("Greater then " + g + ". Try again... \n" + n + " chances left");
+                            tv2.setText("Greater than " + g + ". Try again... \n" + n + " chances left");
                             if (n == 0) {
                                 Intent loser = new Intent(GamePlay.this, loser.class);
                                 loser.putExtra("level", l);
