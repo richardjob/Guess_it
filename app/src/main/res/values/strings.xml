@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Guess it</string>
+    <string name="guess2">Enter your Guess</string>
+    <string name="bt1">OK</string>
+    <string name="textLoser">LOSER .... GAME OVER !!!</string>
+</resources>
