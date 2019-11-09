@@ -6,8 +6,8 @@ android {
         applicationId "com.richie.guess_it"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.5"
+        versionCode 190101010
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
