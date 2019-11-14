@@ -6,18 +6,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
 
 public class GamePlay extends AppCompatActivity {
 
-    TextView tv1;
-    TextView tv2;
-    EditText et1;
-    Button bt1;
+    //declaring views and variables
+
+    TextView tv1,tv2,tv3;
+
+
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12;
 
     int random, g, n = 10;
     int l;
+
+    String text;
 
 
     @Override
@@ -25,32 +29,190 @@ public class GamePlay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_play);
 
+        //initialising views
         tv1 = findViewById(R.id.tv1);
         tv2 = findViewById(R.id.tv2);
-        et1 = findViewById(R.id.et1);
-        bt1 = findViewById(R.id.bt1);
+        tv3 = findViewById(R.id.tv3);
 
+        btn1 = findViewById(R.id.btn1);   //OK button
+        btn2 = findViewById(R.id.btn2);   //1
+        btn3 = findViewById(R.id.btn3);   //2
+        btn4 = findViewById(R.id.btn4);   //3
+        btn5 = findViewById(R.id.btn5);   //4
+        btn6 = findViewById(R.id.btn6);   //5
+        btn7 = findViewById(R.id.btn7);   //6
+        btn8 = findViewById(R.id.btn8);   //7
+        btn9 = findViewById(R.id.btn9);   //8
+        btn10 = findViewById(R.id.btn10); //9
+        btn11 = findViewById(R.id.btn11); //10
+        btn12 = findViewById(R.id.btn12);
+
+
+        //getting last value from intent
         try{
             l = getIntent().getIntExtra("last", 100);
-        }catch(Exception e){}
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
-
+        //generating random number
         random = (int) (Math.random() * ((l - 1)+1)) + 1;
         tv1.setText("Guess the Number between 1 and "+l);
 
 
-        bt1.setOnClickListener(new View.OnClickListener() {
+        //Entering text in text view
+        try {
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "1";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "2";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "3";
+                    tv3.setText(text);
+                }
+            });
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "4";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            btn6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "5";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            btn7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "6";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn8.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "7";
+                    tv3.setText(text);
+                }
+            });
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn9.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "8";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            btn10.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "9";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try{
+            btn11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    text = tv3.getText().toString() + "0";
+                    tv3.setText(text);
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+        try{
+            btn12.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tv3.setText("");
+                }
+            });
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+
+
+        //onClick OK
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (et1.getText().toString().matches("")){
-                    et1.setError("Please Enter a Number");
+                if (tv3.getText().toString().matches("")){
+                    tv3.setText("");
                 }
-                else if (n > 0) {
-                    g = Integer.parseInt(et1.getText().toString());
-                    if (g >= 1 && g < l + 1) {
+                else{
+                    g = Integer.parseInt(tv3.getText().toString());
+                    if (g >= 1 && g < l+1) {
                         if (g > random) {
-                            et1.setText("");
+                            tv3.setText("");
                             n--;
                             tv2.setText("Less than " + g + ". Try again... \n" + n + " chances left");
                             if (n == 0) {
@@ -60,7 +222,7 @@ public class GamePlay extends AppCompatActivity {
                                 finish();
                             }
                         } else if (g < random) {
-                            et1.setText("");
+                            tv3.setText("");
                             n--;
                             tv2.setText("Greater than " + g + ". Try again... \n" + n + " chances left");
                             if (n == 0) {
@@ -76,7 +238,7 @@ public class GamePlay extends AppCompatActivity {
                             finish();
                         }
                     } else {
-                        et1.setError("Enter Number between the given Range ");
+                        tv3.setText("");
                     }
                 }
 

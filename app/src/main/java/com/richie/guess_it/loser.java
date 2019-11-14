@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class loser extends AppCompatActivity {
+
+    //declaring views and variables
     Button bt1;
     Button bt2;
     int l;
@@ -16,14 +18,18 @@ public class loser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loser);
 
+        //getting last value from intent
         try{
             l = getIntent().getIntExtra("level",0);
-        }catch(Exception e){}
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
-
+        //initialising views
         bt1 = findViewById(R.id.button);
         bt2 = findViewById(R.id.button2);
 
+        //play again
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,6 +39,8 @@ public class loser extends AppCompatActivity {
                 finish();
             }
         });
+
+        //change level
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
