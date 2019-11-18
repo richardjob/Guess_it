@@ -2,20 +2,23 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#25CCF7"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="311dp"
-        android:layout_height="72dp"
+        android:layout_width="323dp"
+        android:layout_height="142dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="GAME OVER"
+        android:fontFamily="serif-monospace"
+        android:text="GAME OVER\nBETTER LUCK NEXT TIME"
         android:textAlignment="center"
         android:textColor="#EAF0F1"
-        android:textSize="50sp"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +34,8 @@
         android:layout_marginBottom="168dp"
         android:background="@drawable/custom_button"
         android:text="Play Again"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -46,11 +51,13 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/custom_button"
         android:text="Change Level"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
+        android:fontFamily="serif-monospace"
         app:layout_constraintVertical_bias="0.258" />
 
     <ImageView
@@ -66,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/loser" />
 
 

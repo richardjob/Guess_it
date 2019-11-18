@@ -1,20 +1,9 @@
 <resources>
     <string name="app_name">Guess it</string>
     <string name="help">
-        The app will generate a random number between the given range.\n
-        You have 10 chances to guess the random number generated.\n
-        Next Level will unlock only if the previous levels are cleared.\n
-        The higher levels you go , the larger the range will become.\n\n
-        LEVEL 1 \t-> Range (1 - 100)\n
-        LEVEL 2 \t-> Range (1 - 200)\n
-        LEVEL 3 \t-> Range (1 - 300)\n
-        LEVEL 4 \t-> Range (1 - 400)\n
-        LEVEL 5 \t-> Range (1 - 500)\n
-        LEVEL 6 \t-> Range (1 - 600)\n
-        LEVEL 7 \t-> Range (1 - 700)\n
-        LEVEL 8 \t-> Range (1 - 800)\n
-        LEVEL 9 \t-> Range (1 - 900)\n
-        LEVEL 10\t-> Range (1 - 1000)\n
+        The app will generate a random number between the given range.\nYou have 10 chances to guess the random number generated.\nNext Level will unlock only if the previous levels are cleared.\nThe higher levels you go , the larger the range will become.\n\nLEVEL 1 -> Range(1-100)\nLEVEL 2 -> Range(1-200)\nLEVEL 3 -> Range(1-300)\nLEVEL 4 -> Range(1-400)\nLEVEL 5 -> Range(1-500)\nLEVEL 6 -> Range(1-600)\nLEVEL 7 -> Range(1-700)\nLEVEL 8 -> Range(1-800)\nLEVEL 9 -> Range(1-900)\nLEVEL 10-> Range(1-1000)\n
     </string>
     <string name="guess2">Enter your Guess</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
 </resources>

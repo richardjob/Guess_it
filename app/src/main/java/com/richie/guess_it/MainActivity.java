@@ -1,21 +1,31 @@
 package com.richie.guess_it;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    DrawerLayout mDrawer;
 
     Button bt2,bt3,bt4,bt5,bt6,bt7,bt8,bt9,bt10;
 
     Boolean lock_unlock;
 
-    ImageView img1;
+    ImageView img1,toggle;
 
 
 
@@ -27,8 +37,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         img1 = findViewById(R.id.img1);
+        toggle = findViewById(R.id.toggle);
+
+        mDrawer =findViewById(R.id.drawer);
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        toggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawer.openDrawer(Gravity.START);
+            }
+        });
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 openHelp();
             }
         });
+
 
 
         try {
@@ -212,6 +235,46 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch (menuItem.getItemId()){
+            case R.id.report : {
+                Intent reportIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","guess.it@trashmail.com",null));
+                startActivity(reportIntent);
+                mDrawer.closeDrawer(Gravity.START);
+                break;
+            }
+            case R.id.donate : {
+                Intent donateIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.paypal.me/riichiiee"));
+                startActivity(donateIntent);
+                mDrawer.closeDrawer(Gravity.START);
+                break;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Exit Game?");
+
+        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
+    }
 }
 
 
