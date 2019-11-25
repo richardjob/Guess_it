@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -17,6 +18,7 @@ public class GamePlay extends AppCompatActivity {
 
     TextView tv1,tv2,tv3;
 
+    ImageView backbtn;
 
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12;
 
@@ -35,6 +37,8 @@ public class GamePlay extends AppCompatActivity {
         tv1 = findViewById(R.id.tv1);
         tv2 = findViewById(R.id.tv2);
         tv3 = findViewById(R.id.tv3);
+
+        backbtn =findViewById(R.id.back_arrow);// back arrow
 
         btn1 = findViewById(R.id.btn1);   //OK button
         btn2 = findViewById(R.id.btn2);   //1
@@ -247,7 +251,16 @@ public class GamePlay extends AppCompatActivity {
         }
         });
 
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
+
     @Override
     public void onBackPressed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

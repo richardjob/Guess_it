@@ -15,245 +15,274 @@
         android:background="@drawable/gradient_background">
 
 
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/help"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.976"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.02" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.03">
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:paddingTop="15dp"
+                android:paddingStart="8dp">
+
+                <ImageView
+                    android:id="@+id/toggle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="10dp"
+                    app:srcCompat="@drawable/menu" />
+            </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="238dp"
-            android:layout_height="86dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/custom_textview"
-            android:elevation="10dp"
-            android:fontFamily="cursive"
-            android:paddingTop="18dp"
-            android:paddingEnd="15dp"
-            android:text="Choose Level"
-            android:textAlignment="center"
-            android:textColor="#26a307"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.166" />
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="5dp"
+                android:paddingTop="2dp">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:foregroundGravity="right"
+                    android:src="@drawable/help" />
+            </LinearLayout>
+        </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.77">
-
+            app:layout_constraintVertical_bias="0.65">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="30dp"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
 
-                <Button
-                    android:id="@+id/bt1"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:text="Level 1"
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="250dp"
+                    android:layout_height="86dp"
+                    android:background="@drawable/custom_textview"
+                    android:elevation="10dp"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:text="Choose  Level"
                     android:textAlignment="center"
                     android:textColor="#26a307"
-                    android:textSize="20sp"
+                    android:textSize="34sp"
                     android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt2"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt3"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt4"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-
-                <Button
-                    android:id="@+id/bt5"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/bt6"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt7"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt8"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt9"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/bt10"
-                    android:layout_width="120dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/custom_button"
-                    android:drawableBottom="@drawable/lock"
-                    android:fontFamily="serif-monospace"
-                    android:onClick="startGamePlay"
-                    android:textAlignment="center"
-                    android:textColor="#26a307"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.77">
 
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/bt1"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:text="Level 1"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt2"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt3"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt4"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <Button
+                        android:id="@+id/bt5"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/bt6"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt7"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt8"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt9"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/bt10"
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableBottom="@drawable/lock"
+                        android:fontFamily="serif-monospace"
+                        android:onClick="startGamePlay"
+                        android:textAlignment="center"
+                        android:textColor="#26a307"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/toggle"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.056"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.042"
-            app:srcCompat="@drawable/menu" />
 
     </android.support.constraint.ConstraintLayout>
 
